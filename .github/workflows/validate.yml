@@ -1,0 +1,28 @@
+name: Validate Module Registry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry.json'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'registry.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate registry.json
+        run: python3 scripts/validate-registry.py
+
+      - name: Validate JSON format
+        run: python3 -m json.tool registry.json > /dev/null && echo "JSON syntax valid"
