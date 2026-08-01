@@ -20,15 +20,15 @@
     {
       "name": "pygo-admin",
       "version": "0.1.0",
-      "description": "Admin dashboard components for PyGo — DataTable, FormBuilder, Dashboard widgets",
+      "description": "Admin panel components for PyGo — DataTable, FormBuilder, StatWidget, admin layouts",
       "author": "pygo-labs",
       "repository": "https://github.com/pygo-labs/pygo-admin",
       "download_url": "https://github.com/pygo-labs/pygo-admin/releases/download/v0.1.0/pygo-admin-0.1.0.tar.gz",
       "checksum": "",
-      "dependencies": ["pygo-ui>=0.1.0"],
-      "license": "AGPL-3.0",
+      "dependencies": ["pygo-framework>=1.0.0", "pygo-ui>=0.1.0"],
+      "license": "MIT",
       "category": "admin",
-      "tags": ["admin", "dashboard", "datatable", "form"],
+      "tags": ["admin", "dashboard", "datatable", "form-builder", "management", "crud"],
       "official": true
     },
     {
